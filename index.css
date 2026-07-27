@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(35, 109, 109);
+}
+
+ul {
+   font-style: italic;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
