@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethiopian Airlines - Booking Results</title>
+    <meta name="description" content="Responsive restaurant menu using CSS Grid and Flexbox">
+    <title>Day 14 - Responsive Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,226 +12,106 @@
 
     <div class="page">
 
-        <header class="header">
-            <div class="logo">
-                Ethiopian Airlines
-            </div>
+        <header class="navbar">
+            <div class="logo">Habesha Eatery</div>
 
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Flights</a>
-                <a href="#">Bookings</a>
-                <a href="#">Contact</a>
-                <button>Sign In</button>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </nav>
         </header>
 
-        <aside class="sidebar">
+        <main id="home">
 
-            <h2>Filter Flights</h2>
-
-            <h3>Price</h3>
-
-            <label>
-                <input type="checkbox">
-                Under 10,000 ETB
-            </label>
-
-            <label>
-                <input type="checkbox">
-                10,000 - 20,000 ETB
-            </label>
-
-            <label>
-                <input type="checkbox">
-                Over 20,000 ETB
-            </label>
-
-            <h3>Airline</h3>
-
-            <label>
-                <input type="checkbox">
-                Ethiopian Airlines
-            </label>
-
-            <label>
-                <input type="checkbox">
-                Other Airlines
-            </label>
-
-        </aside>
-
-        <main class="main">
-
-            <section class="search-info">
-                <h1>Flight Results</h1>
-
-                <p>
-                    Addis Ababa → Dubai
-                </p>
-
-                <p>
-                    15 August 2026 · 1 Passenger
-                </p>
+            <section class="hero">
+                <h1>Our Menu</h1>
+                <p>Enjoy delicious Ethiopian dishes made with fresh ingredients.</p>
             </section>
 
-            <section class="toolbar">
+            <section class="menu" id="menu">
 
-                <div>
-                    <strong>Available Flights</strong>
-                </div>
+                <article class="card popular">
+                    <span class="badge">Popular</span>
 
-                <div class="sort">
-                    <label for="sort">Sort by:</label>
-
-                    <select id="sort">
-                        <option>Price</option>
-                        <option>Departure Time</option>
-                        <option>Duration</option>
-                    </select>
-                </div>
-
-            </section>
-
-            <section class="flight-grid">
-
-                <article class="flight-card">
-
-                    <div class="flight-top">
-                        <h2>Ethiopian Airlines</h2>
-                        <span>ET 602</span>
+                    <div>
+                        <h2>Special Kitfo</h2>
+                        <p>
+                            Traditional Ethiopian minced beef prepared
+                            with spices and clarified butter.
+                        </p>
                     </div>
 
-                    <div class="flight-details">
-
-                        <div>
-                            <strong>10:00 AM</strong>
-                            <p>Addis Ababa</p>
-                        </div>
-
-                        <div class="arrow">
-                            →
-                        </div>
-
-                        <div>
-                            <strong>3:30 PM</strong>
-                            <p>Dubai</p>
-                        </div>
-
-                    </div>
-
-                    <div class="flight-bottom">
-                        <span>Non-stop</span>
-                        <strong>18,500 ETB</strong>
-                        <button>Book Now</button>
-                    </div>
-
+                    <strong class="price">450 ETB</strong>
                 </article>
 
-                <article class="flight-card">
-
-                    <div class="flight-top">
-                        <h2>Ethiopian Airlines</h2>
-                        <span>ET 610</span>
+                <article class="card">
+                    <div>
+                        <h2>Doro Wot</h2>
+                        <p>
+                            Spicy Ethiopian chicken stew served with
+                            injera and boiled egg.
+                        </p>
                     </div>
 
-                    <div class="flight-details">
-
-                        <div>
-                            <strong>1:00 PM</strong>
-                            <p>Addis Ababa</p>
-                        </div>
-
-                        <div class="arrow">
-                            →
-                        </div>
-
-                        <div>
-                            <strong>6:40 PM</strong>
-                            <p>Dubai</p>
-                        </div>
-
-                    </div>
-<div class="flight-bottom">
-                        <span>Non-stop</span>
-                        <strong>20,000 ETB</strong>
-                        <button>Book Now</button>
-                    </div>
-
+                    <strong class="price">400 ETB</strong>
                 </article>
 
-                <article class="flight-card">
-
-                    <div class="flight-top">
-                        <h2>Ethiopian Airlines</h2>
-                        <span>ET 620</span>
+                <article class="card">
+                    <div>
+                        <h2>Vegetable Beyaynetu</h2>
+                        <p>
+                            A colorful combination of traditional
+                            Ethiopian vegetable dishes.
+                        </p>
                     </div>
 
-                    <div class="flight-details">
-
-                        <div>
-                            <strong>5:30 PM</strong>
-                            <p>Addis Ababa</p>
-                        </div>
-
-                        <div class="arrow">
-                            →
-                        </div>
-
-                        <div>
-                            <strong>11:00 PM</strong>
-                            <p>Dubai</p>
-                        </div>
-
-                    </div>
-
-                    <div class="flight-bottom">
-                        <span>Non-stop</span>
-                        <strong>22,500 ETB</strong>
-                        <button>Book Now</button>
-                    </div>
-
+                    <strong class="price">300 ETB</strong>
                 </article>
 
-                <article class="flight-card">
-
-                    <div class="flight-top">
-                        <h2>Ethiopian Airlines</h2>
-                        <span>ET 630</span>
+                <article class="card">
+                    <div>
+                        <h2>Tibs</h2>
+                        <p>
+                            Tender pieces of beef sautéed with onions,
+                            peppers and Ethiopian spices.
+                        </p>
                     </div>
 
-                    <div class="flight-details">
+                    <strong class="price">420 ETB</strong>
+                </article>
 
-                        <div>
-                            <strong>8:00 PM</strong>
-                            <p>Addis Ababa</p>
-                        </div>
-
-                        <div class="arrow">
-                            →
-                        </div>
-
-                        <div>
-                            <strong>1:30 AM</strong>
-                            <p>Dubai</p>
-                        </div>
-
+                <article class="card">
+                    <div>
+                        <h2>Shiro</h2>
+                        <p>
+                            Smooth chickpea stew cooked with traditional
+                            Ethiopian spices.
+                        </p>
                     </div>
 
-                    <div class="flight-bottom">
-                        <span>Non-stop</span>
-                        <strong>16,900 ETB</strong>
-                        <button>Book Now</button>
+                    <strong class="price">250 ETB</strong>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <h2>Firfir</h2>
+                        <p>
+                            Pieces of injera mixed with berbere sauce
+                            and Ethiopian spices.
+                        </p>
                     </div>
 
+                    <strong class="price">280 ETB</strong>
                 </article>
 
             </section>
 
         </main>
 
-        <footer class="footer">
-            <p>© 2026 Ethiopian Airlines Booking Page</p>
+        <footer id="contact">
+            <p>&copy; 2026 Habesha Eatery. All rights reserved.</p>
         </footer>
 
     </div>
