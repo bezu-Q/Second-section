@@ -1,0 +1,105 @@
+:root {
+    --green: #2E8B57;
+    --line: #E2E8F0;
+    --ink: #1A2433;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    color: var(--ink);
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--line);
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+}
+
+header h1 { 
+    margin: 0; 
+}
+
+#search { 
+    padding: 0.5rem; 
+    width: 100%; 
+    max-width: 300px; 
+}
+
+main { 
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 1rem; 
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    border: 1px solid var(--line);
+    padding: 1rem;
+}
+
+.dish {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    background: #fdfdfd;
+}
+
+.dish img { 
+    width: 70%;
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    margin: 0 auto 0.5rem auto;
+    display: block;
+}
+
+.dish h3 { 
+    margin: 0.5rem 0; 
+}
+
+.price { 
+    color: var(--green); 
+    font-weight: bold; 
+}
+
+#cart {
+    border: 1px solid var(--line);
+    padding: 1rem;
+    height: fit-content;
+}
+
+button { 
+    padding: 0.5rem 1rem; 
+    background: var(--green); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.rm { 
+    background: #cc0000; 
+    padding: 0.2rem 0.5rem; 
+}
+
+footer { 
+    border: 1px solid var(--line);
+    text-align: center; 
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 800px) {
+    main { 
+        grid-template-columns: 2fr 1fr; 
+    }
+}
