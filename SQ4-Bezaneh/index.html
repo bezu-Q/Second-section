@@ -4,26 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addis Eats</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>Addis Eats</h1>
-        <input type="text" id="search" placeholder="Search dishes..." />
+        <input type="text" id="search" placeholder="Search Ethiopian dishes..." aria-label="Search menu" />
     </header>
+    
     <main>
-        <section id="menu" aria-label="Menu">
-        </section>
+        <section id="menu" aria-label="Menu"></section>
         
         <aside id="cart" aria-label="Your order">
+            <div id="cart-items"></div>
+            
+            <form id="checkout" novalidate>
+                <h3>Checkout</h3>
+                <label>Name
+                    <input type="text" id="name" placeholder="Abe Kebe" required />
+                </label>
+
+                <label>Phone (TeleBirr)
+                    <input type="text" id="phone" placeholder="09xxxxxxxx or +2519xxxxxxxx" required />
+                </label>
+                <label>Delivery Area
+                    <select id="area">
+                        <option>Bole Airport</option>
+                        <option>Abrehot Library</option>
+                        <option>Megenagna Great College</option>
+                        <option>Piassa Adwa Museum</option>
+                        <option>Ayat Tsebel</option>
+                    </select>
+                </label>
+
+                <p id="form-error" class="error" aria-live="polite"></p>
+                <button type="submit" id="place-order-btn">Place Order</button>
+            </form>
         </aside>
     </main>
 
+    <div id="success-modal" class="hidden">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p id="success-message"></p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
     <footer>
         <p>Bole, Addis Ababa • TeleBirr</p>
-    </footer>
-    
+    </footer> 
+
     <script src="app.js"></script>
 </body>
 </html>
